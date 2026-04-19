@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $1000 Towards Your eBike | Official Incentive Program</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-green: #10b981;
+            --brand-dark: #0f172a;
+            --brand-gray: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: var(--brand-gray);
+            color: var(--brand-dark);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #d1fae5 0%, #f8fafc 100%);
+        }
+
+        .btn-primary {
+            background: var(--brand-green);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.4);
+            filter: brightness(110%);
+        }
+
+        .step-card {
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .floating-icon {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .ebike-illustration {
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        .progress-bar-fill {
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span class="text-xl font-extrabold tracking-tight">VoltFlow</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wider">
+                <a href="#how-it-works" class="hover:text-emerald-500 transition">How it Works</a>
+                <a href="#benefits" class="hover:text-emerald-500 transition">Benefits</a>
+            </div>
+            <a href="https://www.af9m8trk.com/TFH115WW/VFF124N1/" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-bold">
+                Check Eligibility
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-gradient overflow-hidden">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-20 right-[-10%] w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute bottom-10 left-[-5%] w-72 h-72 bg-emerald-50 rounded-full blur-3xl opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center z-10">
+            <div id="hero-text">
+                <div class="inline-flex items-center space-x-2 bg-emerald-50 border border-emerald-100 px-4 py-1 rounded-full mb-6">
+                    <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-emerald-700 text-xs font-bold uppercase tracking-widest">Limited Incentives Available</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-6">
+                    Get <span class="text-emerald-500">$1000</span> Towards Your eBike
+                </h1>
+                <p class="text-xl text-slate-600 mb-8 max-w-lg leading-relaxed">
+                    Check your eligibility and unlock potential savings on your next high-performance electric bike. Modern commuting starts here.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://www.af9m8trk.com/TFH115WW/VFF124N1/" class="btn-primary text-white text-center px-10 py-4 rounded-xl text-lg font-bold">
+                        Check Eligibility
+                    </a>
+                    <a href="#how-it-works" class="bg-white border border-slate-200 text-slate-700 text-center px-10 py-4 rounded-xl text-lg font-bold hover:bg-slate-50 transition">
+                        See How It Works
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center space-x-4 text-sm text-slate-400">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-emerald-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                        Secure Verification
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 text-emerald-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 4.946-2.597 9.181-6.5 11.503A11.954 11.954 0 0110 19.944a11.954 11.954 0 01-7.834-3.44C1.597 14.182 1 9.947 1 7c0-.68.056-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Privacy Protected
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden md:block" id="hero-image">
+                <!-- Floating Elements -->
+                <div class="absolute -top-10 -left-10 z-20 floating-icon" style="animation-delay: 0.5s">
+                    <div class="bg-white p-4 rounded-2xl shadow-xl flex items-center space-x-3">
+                        <div class="bg-emerald-100 p-2 rounded-lg">🔋</div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase">Battery Range</p>
+                            <p class="text-sm font-bold">60+ Miles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 -right-12 z-20 floating-icon" style="animation-delay: 2s">
+                    <div class="bg-white p-4 rounded-2xl shadow-xl flex items-center space-x-3">
+                        <div class="bg-blue-100 p-2 rounded-lg">⚡</div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase">Top Speed</p>
+                            <p class="text-sm font-bold">28 MPH</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main eBike Illustration (SVG Placeholder) -->
+                <div class="ebike-illustration">
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="150" cy="300" r="80" stroke="#334155" stroke-width="15" fill="none" opacity="0.2" />
+                        <circle cx="350" cy="300" r="80" stroke="#334155" stroke-width="15" fill="none" opacity="0.2" />
+                        <path d="M150 300 L250 150 L400 150 L350 300 M250 150 L200 100" stroke="#10b981" stroke-width="15" stroke-linecap="round" fill="none" />
+                        <path d="M350 300 L320 200" stroke="#334155" stroke-width="10" stroke-linecap="round" />
+                        <circle cx="150" cy="300" r="20" fill="#10b981" />
+                        <circle cx="350" cy="300" r="20" fill="#10b981" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator flex flex-col items-center">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mb-2">Scroll</span>
+            <div class="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center pt-2">
+                <div class="w-1 h-2 bg-emerald-500 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Simple Eligibility Process</h2>
+                <p class="text-slate-500 text-lg">Follow these three steps to see if you qualify for savings.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="step-card bg-slate-50 p-10 rounded-3xl border border-slate-100 relative group">
+                    <div class="text-6xl mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">📝</div>
+                    <div class="absolute top-8 right-8 text-slate-200 text-7xl font-black">01</div>
+                    <h3 class="text-xl font-bold mb-4">Enter Basic Details</h3>
+                    <p class="text-slate-500 leading-relaxed">Provide your location and general info to check program availability in your area.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card bg-slate-50 p-10 rounded-3xl border border-slate-100 relative group">
+                    <div class="text-6xl mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">✅</div>
+                    <div class="absolute top-8 right-8 text-slate-200 text-7xl font-black">02</div>
+                    <h3 class="text-xl font-bold mb-4">Complete Required Steps</h3>
+                    <p class="text-slate-500 leading-relaxed">Go through the quick secure verification process to confirm your eligibility status.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card bg-emerald-500 p-10 rounded-3xl border border-emerald-400 relative group text-white">
+                    <div class="text-6xl mb-6">🚲</div>
+                    <div class="absolute top-8 right-8 text-emerald-600 text-7xl font-black opacity-30">03</div>
+                    <h3 class="text-xl font-bold mb-4">Receive Savings</h3>
+                    <p class="text-emerald-50 text-xl font-medium leading-relaxed">If eligible, use your savings towards your brand new high-performance eBike.</p>
+                </div>
+            </div>
+
+            <!-- Progress Bar Visualization -->
+            <div class="mt-16 bg-slate-100 h-2 rounded-full max-w-2xl mx-auto overflow-hidden">
+                <div class="progress-bar-fill bg-emerald-500 h-full w-1/3" id="main-progress"></div>
+            </div>
+            <div class="text-center mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                Initial Eligibility Check
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Why Switch to an eBike?</h2>
+                    <p class="text-slate-500 text-lg">Beyond the savings, electric bikes offer a better way to experience your city and the outdoors.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="https://www.af9m8trk.com/TFH115WW/VFF124N1/" class="text-emerald-600 font-bold flex items-center group">
+                        Start Your Eligibility Check 
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Cut Costs</h4>
+                    <p class="text-slate-500 text-sm">Save thousands on gas, insurance, and parking every single year.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Eco-Friendly</h4>
+                    <p class="text-slate-500 text-sm">Reduce your carbon footprint with zero-emission daily commuting.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Beat Traffic</h4>
+                    <p class="text-slate-500 text-sm">Bypass congestion using bike lanes and reach your destination faster.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Health & Wellness</h4>
+                    <p class="text-slate-500 text-sm">Get low-impact exercise while you commute without arriving sweaty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Trusted by Future Commuters</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="text-slate-700 italic mb-6">"The process was simple and helped me reduce my potential costs significantly. I'm excited to finally get my eBike."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full mr-3"></div>
+                        <span class="font-bold text-slate-900">Mark T.</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <div class="flex text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="text-slate-700 italic mb-6">"Great opportunity if you're planning to switch to an eBike. The eligibility check was much faster than I expected."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-200 rounded-full mr-3"></div>
+                        <span class="font-bold text-slate-900">Jessica L.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-emerald-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+                <!-- Decorative Circle -->
+                <div class="absolute -top-20 -left-20 w-64 h-64 bg-emerald-800 rounded-full opacity-30"></div>
+                
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">Ready to Start?</h2>
+                <p class="text-emerald-100 text-lg mb-10 relative z-10 max-w-lg mx-auto leading-relaxed">
+                    Check your eligibility today. Availability depends on location and program participation limits.
+                </p>
+                
+                <div class="relative z-10 flex flex-col items-center">
+                    <a href="https://www.af9m8trk.com/TFH115WW/VFF124N1/" class="btn-primary text-white px-12 py-5 rounded-2xl text-xl font-bold w-full sm:w-auto">
+                        Check Eligibility Now
+                    </a>
+                    
+                    <div class="mt-8 flex items-center justify-center space-x-6 text-emerald-300 text-sm">
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                            Secure Process
+                        </span>
+                        <span class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                            Transparent Info
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-16 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <svg class="w-6 h-6 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="text-xl font-extrabold">VoltFlow</span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm">
+                        Helping urban commuters transition to sustainable, cost-effective transportation through incentive transparency and eligibility verification.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-slate-900 mb-6">Legal</h5>
+                    <ul class="text-slate-400 text-sm space-y-4">
+                        <li><a href="#" class="hover:text-emerald-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition">Compliance Notice</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-slate-900 mb-6">Support</h5>
+                    <ul class="text-slate-400 text-sm space-y-4">
+                        <li><a href="#" class="hover:text-emerald-500 transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-200 text-center">
+                <p class="text-slate-400 text-[11px] leading-relaxed max-w-4xl mx-auto">
+                    DISCLAIMER: This is a promotional offer. Completion of required steps is necessary to determine eligibility. Final reward or incentive amount may vary based on user location, program funding availability, and specific eligibility criteria. Not all applicants will qualify. This program is for USA-based residents only. VoltFlow is an independent information service and is not directly affiliated with any government agency unless explicitly stated.
+                </p>
+                <p class="mt-6 text-slate-300 text-[10px] uppercase tracking-widest font-bold">
+                    © 2024 VoltFlow Incentives. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Wait for DOM to load
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero Section Animations
+            const heroTl = gsap.timeline({defaults: {ease: "power3.out", duration: 1}});
+            heroTl.from("#hero-text h1", {opacity: 0, x: -50, delay: 0.5})
+                  .from("#hero-text p", {opacity: 0, x: -30}, "-=0.7")
+                  .from("#hero-text .flex-col", {opacity: 0, y: 20}, "-=0.7")
+                  .from("#hero-image", {opacity: 0, x: 50, scale: 0.9}, "-=1");
+
+            // Scroll animations for step cards
+            gsap.from(".step-card", {
+                scrollTrigger: {
+                    trigger: "#how-it-works",
+                    start: "top 80%",
+                },
+                opacity: 0,
+                y: 50,
+                stagger: 0.2,
+                duration: 0.8,
+                ease: "power2.out"
+            });
+
+            // Progress bar update on scroll
+            gsap.to("#main-progress", {
+                scrollTrigger: {
+                    trigger: "#how-it-works",
+                    start: "top 70%",
+                    end: "bottom 50%",
+                    scrub: true
+                },
+                width: "100%",
+                ease: "none"
+            });
+
+            // Benefits icons animation
+            gsap.from("#benefits .bg-white", {
+                scrollTrigger: {
+                    trigger: "#benefits",
+                    start: "top 75%",
+                },
+                opacity: 0,
+                scale: 0.9,
+                y: 30,
+                stagger: 0.1,
+                duration: 0.6
+            });
+
+            // Parallax effect for the eBike illustration
+            window.addEventListener('mousemove', (e) => {
+                const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+                
+                gsap.to(".ebike-illustration", {
+                    x: moveX,
+                    y: moveY,
+                    duration: 1,
+                    ease: "power1.out"
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
